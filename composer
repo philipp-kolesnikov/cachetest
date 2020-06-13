@@ -1,0 +1,9 @@
+#!/bin/bash
+
+docker run --rm \
+           -ti \
+           -v ${COMPOSER_HOME:-$HOME/.composer}:/tmp \
+           -v $(pwd):/data \
+           -w /data \
+          --user $(id -u):$(id -g) \
+          composer $*

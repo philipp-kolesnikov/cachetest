@@ -1,0 +1,3 @@
+#!/bin/bash
+
+docker run --rm -v $(pwd):/data -w /data php:7.4-cli ./vendor/bin/phpunit $*
